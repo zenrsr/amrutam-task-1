@@ -1,5 +1,3 @@
-Great! Based on the information you've provided, here's a draft for your README file:
-
 ---
 
 # Amrutam Task 1
@@ -12,7 +10,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository using the following command:
    ```
-   git clone https://github.com/zenrsr/amrutam-task-1.git
+   git clone [<repository_link>](https://github.com/zenrsr/amrutam-task-1.git)
    ```
 
 2. Navigate to the project directory:
@@ -57,6 +55,14 @@ This will start the development server and you can access the application in you
 ## Additional Notes
 - This project uses npm as the package manager.
 - Ensure you have Node.js installed on your machine before proceeding with the installation.
+
+## Installing with requirements.txt
+Alternatively, you can use the `requirements.txt` file to install all the necessary packages in one go. After cloning the repository and navigating to the project directory, run the following command:
+```
+npm install -r requirements.txt
+```
+
+This command will read the `requirements.txt` file and install all the required packages listed in it.
 
 ## Contributing
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
