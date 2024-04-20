@@ -1,5 +1,4 @@
 import React from "react";
-import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaChevronDown } from "react-icons/fa";
@@ -8,9 +7,17 @@ import { GiMedicines } from "react-icons/gi";
 import { GiGraduateCap } from "react-icons/gi";
 import { CiChat1 } from "react-icons/ci";
 import { Button } from "@nextui-org/react";
+import { Menu } from "../Dropdown/Drop";
 
-const doctors = ["Hyderbad", "Bangalore", "Chennai", "Delhi", "Mumbai", "Pune"];
 const FindDocs = ({ onViewProfile }) => {
+  const menuItems = [
+    { name: "Hyderabad" },
+    { name: "Bangalore" },
+    { name: "Chennai" },
+    { name: "Delhi" },
+    { name: "Mumbai" },
+    { name: "Pune" }
+  ];
   return (
     <>
       <div
@@ -24,14 +31,10 @@ const FindDocs = ({ onViewProfile }) => {
           Find Expert Doctors For An In-Clinic Session Here
         </h1>
         <div className="flex flex-col sm:flex-row items-center justify-center p-2 w-full">
-          <div className=" w-1/2 sm:w-1/4 rounded-lg ml-3 mb-2">
-            <Dropdown
-              options={doctors}
-              placeholder="📍location"
-              className="rounded-lg  border-none bg-transparent overflow-hidden"
-            />
+          <div className="w-1/2 sm:w-1/4 rounded-lg ml-3 mb-2">
+            <Menu menuItems={menuItems} />
           </div>
-          <div className="flex w-1/2 sm:w-1/3 flex-wrap md:flex-nowrap gap-4 ml-2 items-center justify-center p-2 h-[40px] bg-white rounded-md">
+          <div className="flex w-1/2 sm:w-1/3 flex-wrap md:flex-nowrap gap-4 items-center justify-center p-2 h-[40px] bg-white rounded-md">
             <input
               className=" w-3/4 bg-transparent h-full focus:outline-none"
               placeholder="eg. Doctor, specialization, clinic, name "
@@ -123,7 +126,10 @@ const FindDocs = ({ onViewProfile }) => {
               </div>
             </div>
             <div className="w-full flex flex-col items-center justify-center my-2">
-              <Button className="bg-white rounded-lg border-2 border-green-900 text-green-900 flex justify-center items-center w-3/4 h-10 my-1">
+              <Button
+                onClick={onViewProfile}
+                className="bg-white rounded-lg border-2 border-green-900 text-green-900 flex justify-center items-center w-3/4 h-10 my-1"
+              >
                 View Profile
               </Button>
               <Button className="bg-green-900 flex justify-center items-center w-3/4 h-10 text-white rounded-lg my-1">
@@ -146,15 +152,15 @@ const FindDocs = ({ onViewProfile }) => {
               Dr. Bruce Willis
             </h1>
             <div className="flex flex-col my-2">
-              <div className="flex items-center justify-start">
+              <div className="mb-2 flex items-center justify-start">
                 <GiMedicines className="text-green-900 w-6 h-6" />
                 <p className="ml-2 text-slate-700">Male-Female Infertility</p>
               </div>
-              <div className="flex items-center justify-start">
+              <div className="mb-2 flex items-center justify-start">
                 <GiGraduateCap className="text-green-900 w-6 h-6" />
                 <p className="ml-2 text-slate-700">7 years of Experience</p>
               </div>
-              <div className="flex items-center justify-start">
+              <div className="mb-2 flex items-center justify-start">
                 <CiChat1 className="text-green-900 w-6 h-6" />
                 <p className="ml-2 text-slate-700">
                   Speaks: English, Hindi, Marathi
@@ -198,15 +204,15 @@ const FindDocs = ({ onViewProfile }) => {
               Dr. Bruce Willis
             </h1>
             <div className="flex flex-col my-2">
-              <div className="flex items-center justify-start">
+              <div className="mb-2 flex items-center justify-start">
                 <GiMedicines className="text-green-900 w-6 h-6" />
                 <p className="ml-2 text-slate-700">Male-Female Infertility</p>
               </div>
-              <div className="flex items-center justify-start">
+              <div className="mb-2 flex items-center justify-start">
                 <GiGraduateCap className="text-green-900 w-6 h-6" />
                 <p className="ml-2 text-slate-700">7 years of Experience</p>
               </div>
-              <div className="flex items-center justify-start">
+              <div className="mb-2 flex items-center justify-start">
                 <CiChat1 className="text-green-900 w-6 h-6" />
                 <p className="ml-2 text-slate-700">
                   Speaks: English, Hindi, Marathi
