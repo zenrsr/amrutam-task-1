@@ -10,7 +10,7 @@ To run this project locally, follow these steps:
 
 1. Clone the repository using the following command:
    ```
-   git clone [<repository_link>](https://github.com/zenrsr/amrutam-task-1.git)
+   git clone https://github.com/zenrsr/amrutam-task-1.git
    ```
 
 2. Navigate to the project directory:
